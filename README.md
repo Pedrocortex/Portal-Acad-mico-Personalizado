@@ -15,11 +15,13 @@ The project was designed to simulate a real-world application, combining backend
 
 ## 📌 About the Project
 
-**EduTrack AI** was developed to simplify academic organization by providing a single platform for managing academic information.
+Students often have to manage their courses, assignments, exams, projects, professors, grades, and academic deadlines across different platforms and personal notes, making it difficult to keep track of their academic routine and overall performance.
 
-The application includes user authentication, CRUD operations for academic data, and a dashboard for visualizing grades by course.
+EduTrack AI was developed to address this problem by bringing essential academic information together in a single centralized platform.
 
-The system uses **Streamlit** as the web interface and an external **Xano API** for data persistence and backend management.
+The application allows students to organize their academic activities, manage assignments, projects, exams, courses, and professors, while also providing a dashboard to visualize their grades and monitor academic performance.
+
+By combining Streamlit, a REST API, authentication, CRUD operations, and data visualization, EduTrack AI provides a structured and centralized solution for academic organization.
 
 ---
 
