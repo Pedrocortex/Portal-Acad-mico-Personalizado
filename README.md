@@ -145,7 +145,6 @@ EduTrack-AI/
 ├── main.py
 ├── api.py
 ├── ultilitario.py
-├── requirements.txt
 └── README.md
 ```
 
