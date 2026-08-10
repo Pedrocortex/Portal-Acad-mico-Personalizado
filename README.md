@@ -422,65 +422,9 @@ This project applies concepts related to:
 * State management
 * User experience
 
----
 
-## 🔮 Future Improvements
+📄 License
 
-Possible future improvements include:
+This project is licensed under the MIT License.
 
-* [ ] Academic calendar
-* [ ] Task and exam notifications
-* [ ] More detailed attendance tracking
-* [ ] Academic performance reports
-* [ ] Overall grade calculation
-* [ ] Dashboard filters
-* [ ] Grade progression charts
-* [ ] Task priority system
-* [ ] External calendar integration
-* [ ] Improved responsiveness
-* [ ] Environment variables for API configuration
-* [ ] Automated tests
-
----
-
-## 👨‍💻 Academic Project
-
-EduTrack AI was developed as a practical project to apply concepts related to **programming, databases, APIs, web development, and data analysis**.
-
----
-
-## 📄 License
-
-This project does not currently have a defined license.
-
-If the project is intended to be publicly distributed, modified, or reused, it is recommended to add an appropriate license such as **MIT**, **Apache 2.0**, or **GPL**.
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome.
-
-To contribute:
-
-```bash
-git checkout -b my-feature
-```
-
-Make your changes and then:
-
-```bash
-git add .
-git commit -m "feat: add new feature"
-git push origin my-feature
-```
-
-Then open a **Pull Request**.
-
----
-
-## 📬 Contact
-
-Developed by **Cortez**.
-
-If you have suggestions, find a bug, or would like to contribute, open an **Issue** in this repository.
+You are free to use, copy, modify, merge, publish, distribute, sublicense, and sell copies of the software, subject to the conditions of the MIT License.
