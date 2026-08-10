@@ -275,29 +275,37 @@ requests
 ## 🔄 Architecture
 
 ```text
-┌─────────────────────────────┐
-│            User             │
-└──────────────┬──────────────┘
-               │
-               ▼
-┌─────────────────────────────┐
-│       Streamlit / UI        │
-│          main.py            │
-└──────────────┬──────────────┘
-               │
-               ▼
-┌─────────────────────────────┐
-│          API Layer          │
-│           api.py            │
-└──────────────┬──────────────┘
-               │
-          HTTP + JWT
-               │
-               ▼
-┌─────────────────────────────┐
-│            Xano             │
-│        Backend / API        │
-└─────────────────────────────┘
+      ┌─────────────────────────────┐
+      │            User             │
+      └──────────────┬──────────────┘
+                     │
+                     ▼
+      ┌─────────────────────────────┐
+      │       Streamlit / UI        │
+      │          main.py            │
+      └──────────────┬──────────────┘
+                     │
+      ┌──────────────┴──────────────┐
+      │                             │
+      ▼                             ▼
+┌─────────────────────┐       ┌─────────────────────┐
+│   Utility Layer     │       │      API Layer      │
+│   ultilitario.py    │       │       api.py        │
+│                     │       │                     │
+│ • Data validation   │       │ • GET               │
+│ • Text processing   │       │ • POST              │
+│ • Input validation  │       │ • PATCH             │
+│ • Password rules    │       │ • DELETE            │
+└─────────────────────┘       └──────────┬──────────┘
+                                    │
+                               HTTP + JWT
+                                    │
+                                    ▼
+                      ┌─────────────────────────┐
+                      │          Xano           │
+                      │      Backend / API      │
+                      └─────────────────────────┘
+Architecture Layers
 ```
 
 Data validation and utility functions are handled by `ultilitario.py`.
@@ -323,24 +331,37 @@ The application also uses cookies to maintain authentication between requests an
 ## 📊 Functional Overview
 
 ```text
-                    EduTrack AI
-                         │
-        ┌────────────────┼────────────────┐
-        │                │                │
-        ▼                ▼                ▼
-   Professors         Courses          Projects
-        │                │                │
-        │                ├───────────────┤
-        │                │
-        ▼                ▼
-      Tasks             Exams
-        │                │
-        └────────┬───────┘
-                 ▼
-             Dashboard
-                 │
-                 ▼
-        Academic Performance
+                         EduTrack AI
+                              │
+                              ▼
+                         Professors
+                              │
+                              ▼
+                           Courses
+                              │ - - - - - -> Dashboard
+                ┌─────────────┼─────────────┐
+                │             │             │
+                ▼             ▼             ▼
+             Projects       Tasks          Exams
+                │             │             │
+                └─────────────┼─────────────┘
+                              │
+                              ▼
+                    Academic Performance
+```
+
+### Dependency Structure
+
+* **Professors** are independent entities.
+* **Courses** depend on a professor.
+* **Projects** depend on a course.
+* **Tasks** depend on a course.
+* **Exams** depend on a course.
+* **Dashboard** consolidates information from courses.
+* **Academic Performance** is derived from the academic data presented in the dashboard.
+
+This structure reflects the relationship between the main entities of the EduTrack AI system, where the **course acts as the central academic entity** connecting professors, projects, tasks, and exams.
+
 ```
 
 ---
