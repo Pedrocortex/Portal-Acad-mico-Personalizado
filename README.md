@@ -337,8 +337,8 @@ The application also uses cookies to maintain authentication between requests an
                          Professors
                               │
                               ▼
-                           Courses
-                              │ - - - - - -> Dashboard
+                           Courses ─ ─ ─ ─ ─ ─ ─ ▶ Dashboard
+                              │ 
                 ┌─────────────┼─────────────┐
                 │             │             │
                 ▼             ▼             ▼
