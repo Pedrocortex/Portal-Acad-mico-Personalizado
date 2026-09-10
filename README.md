@@ -4,7 +4,10 @@ A web application for **academic organization and management**, developed with P
 
 EduTrack AI centralizes information about courses, professors, assignments, projects, and exams, while also providing a dashboard for monitoring academic performance.
 
---- 
+🚀 **Live Demo:** [Access EduTrack AI App](https://app-acad-mico-personalizado-dv2i2wdqqkkuzohb6iytvw.streamlit.app/)
+
+---
+
 🎓 Academic Project
 
 EduTrack AI was developed as a college academic project with the goal of applying software development concepts in a practical environment.
